@@ -1,0 +1,291 @@
+[
+    {
+        "type": "starter",
+        "img": "/pic/fish-tikka.jpg",
+        "dishname": "Fish Tikka",
+        "name": "Fish Tikka",
+        "cost": "₹160",
+        "food_type":"non-veg",
+        "price": "160"
+        
+    },
+    {
+        "type": "starter",
+        "img": "/pic/seekh-kebab.jpg",
+        "dishname": "Seekh Kebab",
+        "name": "Seekh-Kebab",
+        "cost": "₹170",
+        "food_type":"non-veg",
+        "price": "170"
+    },
+    {
+        "type": "starter",
+        "img": "/pic/Paneer_Tikka.jpg",
+        "dishname": "Paneer Tikka",
+        "name": "Paneer-Tikka",
+        "cost": "₹140",
+        "food_type":"veg",
+        "price": "140"
+    },
+    {
+        "type": "starter",
+        "img": "/pic/mutton-zafrani-kabab.jpg",
+        "dishname": "Mutton Zafrani kabab",
+        "name": "Mutton-Zafrani-kabab",
+        "cost": "₹180",
+        "food_type":"non-veg",
+        "price": "180"
+    },
+    {
+        "type": "starter",
+        "img": "/pic/chicken.sweet.corn.jpg",
+        "dishname": "Chicken Sweet Corn Soup",
+        "name": "Chicken-Sweet-Corn-Soup",
+        "cost": "₹180",
+        "food_type":"non-veg",
+        "price": "180"
+    },
+    {
+        "type": "starter",
+        "img": "/pic/lambchops.jpeg",
+        "dishname": "Lamb Chops",
+        "name": "Lamb-Chops",
+        "cost": "₹180",
+        "food_type":"non-veg",
+        "price": "180"
+    },
+    {
+        "type": "starter",
+        "img": "/pic/chillibabycorn.jpeg",
+        "dishname": "Chilli Babycorn",
+        "name": "Chilli-Babycorn",
+        "cost": "₹150",
+        "food_type":"veg",
+        "price": "150"
+    },
+    {
+        "type": "starter",
+        "img": "/pic/chickenlemon.jpeg",
+        "dishname": "Chicken Lemon",
+        "name": "Chicken-Lemon",
+        "cost": "₹160",
+        "food_type":"non-veg",
+        "price": "160"
+    },
+    {
+        "type": "chinese",
+        "img": "/pic/oudh-chilli-chicken.jpg",
+        "dishname": "Chilli Chicken",
+        "name": "Chilli-Chicken",
+        "cost": "₹160",
+        "food_type":"non-veg",
+        "price": "160"
+    },
+    {
+        "type": "chinese",
+        "img": "/pic/Veg-Hakka-Noodles.jpg",
+        "dishname": "Veg Hakka Noodles",
+        "name": "Veg-Hakka-Noodles",
+        "cost": "₹120",
+        "food_type":"non-veg",
+        "price": "120"
+    },
+    {
+        "type": "chinese",
+        "img": "/pic/oudh-momo.jpg",
+        "dishname": "Momo",
+        "name": "Momo",
+        "cost": "₹120",
+        "food_type":"non-veg",
+        "price": "120"
+    },
+    {
+        "type": "chinese",
+        "img": "/pic/oudh-ramen.jpg",
+        "dishname": "Ramen",
+        "name": "Ramen",
+        "cost": "₹170",
+        "food_type":"non-veg",
+        "price": "170"
+    },
+    {
+        "type": "chinese",
+        "img": "/pic/oudh-dumpling.jpg",
+        "dishname": "Dumpling",
+        "name": "Dumpling",
+        "cost": "₹110",
+        "food_type":"non-veg",
+        "price": "110"
+    },
+    {
+        "type": "chinese",
+        "img": "/pic/shashimi.jpg",
+        "dishname": "Shashimi",
+        "name": "Shashimi",
+        "cost": "₹140",
+        "food_type":"non-veg",
+        "price": "140"
+    },
+    {
+        "type": "chinese",
+        "img": "/pic/springrolls.jpg",
+        "dishname": "Spring Rolls",
+        "name": "Spring-Rolls",
+        "cost": "₹140",
+        "food_type":"non-veg",
+        "price": "140"
+    },
+    {
+        "type": "chinese",
+        "img": "/pic/brownbowl.jpg",
+        "dishname": "Brown Bowl",
+        "name": "Brown-Bowl",
+        "cost": "₹180",
+        "food_type":"non-veg",
+        "price": "180"
+    },
+    {
+        "type": "Indian-Cuisine",
+        "img": "/pic/muttonbiryani.jpg",
+        "dishname": "Mutton Biryani",
+        "name": "Mutton-Biryani",
+        "cost": "₹220",
+        "food_type":"non-veg",
+        "price": "220"
+    },
+    {
+        "type": "Indian-Cuisine",
+        "img": "/pic/friedrice.jpg",
+        "dishname": "Fried Rice",
+        "name": "Fried-Rice",
+        "cost": "₹120",
+        "food_type":"veg",
+        "price": "120"
+    },
+    {
+        "type": "Indian-Cuisine",
+        "img": "/pic/muttonkosha.jpg",
+        "dishname": "Mutton Kosha",
+        "name": "Mutton-Kosha",
+        "cost": "₹160",
+        "food_type":"non-veg",
+        "price": "160"
+    },
+    {
+        "type": "Indian-Cuisine",
+        "img": "/pic/butterchicken.jpg",
+        "dishname": "Butter Chicken",
+        "name": "Butter-Chicken",
+        "cost": "₹150",
+        "food_type":"non-veg",
+        "price": "150"
+    },
+    {
+        "type": "Indian-Cuisine",
+        "img": "/pic/polau.jpg",
+        "dishname": "Polau",
+        "name": "Polau",
+        "cost": "₹120",
+        "food_type":"veg",
+        "price": "120"
+    },
+    {
+        "type": "Indian-Cuisine",
+        "img": "/pic/prawnbarbeque.jpg",
+        "dishname": "Prawn Barbeque",
+        "name": "Prawn-Barbeque",
+        "cost": "₹180",
+        "food_type":"non-veg",
+        "price": "180"
+    },
+    {
+        "type": "Indian-Cuisine",
+        "img": "/pic/lentils.jpg",
+        "dishname": "Lentils",
+        "name": "Lentils",
+        "cost": "₹100",
+        "food_type":"veg",
+        "price": "160"
+    },
+    {
+        "type": "Indian-Cuisine",
+        "img": "/pic/crispyfish.jpg",
+        "dishname": "Crispy Fish",
+        "name": "Crispy-Fish",
+        "cost": "₹140",
+        "food_type":"non-veg",
+        "price": "140"
+    },
+    {
+        "type": "desert",
+        "img": "/pic/rosogolla.jpg",
+        "dishname": "Rosogolla",
+        "name": "Rosogolla",
+        "cost": "₹15",
+        "food_type":"veg",
+        "price": "15"
+    },
+    {
+        "type": "desert",
+        "img": "/pic/icecream.jpg",
+        "dishname": "Ice Cream",
+        "name": "Ice-Cream",
+        "cost": "₹40",
+        "food_type":"veg",
+        "price": "40"
+    },
+    {
+        "type": "desert",
+        "img": "/pic/barfi.jpg",
+        "dishname": "Barfi",
+        "name": "Barfi",
+        "cost": "₹30",
+        "food_type":"veg",
+        "price": "30"
+    },
+    {
+        "type": "desert",
+        "img": "/pic/gulabjamun.jpg",
+        "dishname": "Gulab Jamun",
+        "name": "Gulab-Jamun",
+        "cost": "₹25",
+        "food_type":"veg",
+        "price": "25"
+    },
+    {
+        "type": "desert",
+        "img": "/pic/kheer.jpg",
+        "dishname": "Kheer",
+        "name": "Kheer",
+        "cost": "₹60",
+        "food_type":"veg",
+        "price": "60"
+    },
+    {
+        "type": "desert",
+        "img": "/pic/strawberrycake.jpg",
+        "dishname": "Strawberry Cake",
+        "name": "Strawberry-Cake",
+        "cost": "₹90",
+        "food_type":"veg",
+        "price": "90"
+    },
+    {
+        "type": "desert",
+        "img": "/pic/panberry.jpg",
+        "dishname": "Pancake",
+        "name": "Pancake",
+        "cost": "₹60",
+        "food_type":"veg",
+        "price": "60"
+    },
+    {
+        "type": "desert",
+        "img": "/pic/donuts.jpg",
+        "dishname": "Donuts",
+        "name": "Donuts",
+        "cost": "₹80",
+        "food_type":"veg",
+        "price": "80"
+    }
+]

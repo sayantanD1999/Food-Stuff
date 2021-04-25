@@ -1,0 +1,51 @@
+[
+    {
+        "name": "myMandap",
+        "img": "/pic2/myMandap.jpg",
+        "address": "418/2, Jawpur Rd,Panchanantala, Bahiragath Colony, Jawpur, Dum Dum",
+        "city": "Kolkata",
+        "cost": "700",
+        "link": "customizedfoodplate.html"
+    },
+    {
+        "name": "Karachi Caterers",
+        "img": "/pic2/karachicaterers.jpg",
+        "address": "41-A Gole Market, Gole Market, Gole Market,Delhi 110001",
+        "city": "Delhi",
+        "cost": "1000",
+        "link": "customizedfoodplate.html"
+    },
+    
+    {
+        "name": "Salt & Pepper",
+        "img": "/pic2/salt&pepper.jpg",
+        "address": "City Center",
+        "city": "Delhi",
+        "cost": "1200",
+        "link": "customizedfoodplate.html"
+    },
+    {
+        "name": "Bhojohori Mannna",
+        "img": "/pic2/bhojohorimanna.jpg",
+        "address": "Ekdalia,Hazra,Saltlake,Chinar Park",
+        "city": "Kolkata",
+        "cost": "750",
+        "link": "customizedfoodplate.html"
+    },
+    {
+        "name": "Dawat Caterers",
+        "img": "/pic2/dawat.jpg",
+        "address": "108, Jole Doba Para, Khardaha",
+        "city": "Barrackpore",
+        "cost": "825",
+        "link": "customizedfoodplate.html"
+    },
+    {
+        "name": "6 Ballygaunge Place",
+        "img": "/pic2/6ballygunge.jpg",
+        "address": "Ballygunge",
+        "city": "Kolkata",
+        "cost": "825",
+        "link": "customizedfoodplate.html"
+    }
+]
