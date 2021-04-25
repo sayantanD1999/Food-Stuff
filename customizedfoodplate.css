@@ -355,7 +355,7 @@ button{
 }
 
 .tabContentDesert {
-    background-image: url(/pic/desert-background.jpg);
+    background-image: url(pic/desert-background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -370,7 +370,7 @@ button{
 }
 
 .tabContentMaincourse {
-    background-image: url(/pic/maincourse-background.jpg);
+    background-image: url(pic/maincourse-background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -385,7 +385,7 @@ button{
 }
 
 .tabContentStarter {
-    background-image: url(/pic/starter-background.jpg);
+    background-image: url(pic/starter-background.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
