@@ -17,8 +17,11 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="csscodes/foodstuff-home.css">
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link href="css/all.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/all.min.css">
+    <link href="css/all.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
     <title>FoodStuff Home</title>
 </head>
 
@@ -62,7 +65,7 @@
                     </li>
                     <li class="nav-item hover-underline-animation">
                         <a class="nav-link" href="html/caterersearch.html" style="color: black;">Caterers</a>
-                    </li> 
+                    </li>
                 </ul>
             </div>
         </div>
@@ -99,8 +102,8 @@
         </div>
 
         <br><br><br>
-        <div class="container-fluid" style="background-color: white;" >
-            <h2 style="text-align: center;"><span style="color: coral;"> FoodStuff </span>  Best Deals!!!</h2>
+        <div class="container-fluid" style="background-color: white;">
+            <h2 style="text-align: center;"><span style="color: coral;"> FoodStuff </span> Best Deals!!!</h2>
 
             <div class="row">
                 <div class="col-sm-4" style="text-align: center; ">
@@ -134,7 +137,7 @@
         </div>
 
 
-        <header class="header" >
+        <header class="header">
             <div class="hero">
                 <h1 class="title">
                     Food Stuff
@@ -291,9 +294,9 @@
     <br><br>
 
     <div id="buttom-nav" class="">
-        <a href="index.html"><button ><i class="fas fa-home"></i> <br> Home </button></a>
-        <a href="html/restaurantsearch.html"><button > <i class="fas fa-utensils"></i> <br> Explore </button></a>
-        <a href="html/caterersearch.html"><button ><i class="fas fa-hamburger"></i> <br> Caterers </button></a>
+        <a href="index.html"><button><i class="fas fa-home"></i> <br> Home </button></a>
+        <a href="html/restaurantsearch.html"><button> <i class="fas fa-utensils"></i> <br> Explore </button></a>
+        <a href="html/caterersearch.html"><button><i class="fas fa-hamburger"></i> <br> Caterers </button></a>
     </div>
 
 
@@ -321,25 +324,24 @@
         }
 
         var prevScroll = window.pageYOffset;
-        window.onscroll=function(){
+        window.onscroll = function () {
             var currScroll = window.pageYOffset;
-            if (prevScroll>currScroll)
-            {
-                document.getElementsByClassName("navbar")[0].style.top="0";
-                document.getElementsByClassName("navbar")[0].style.transition="0.5s";
+            if (prevScroll > currScroll) {
+                document.getElementsByClassName("navbar")[0].style.top = "0";
+                document.getElementsByClassName("navbar")[0].style.transition = "0.5s";
             }
-            else{
-                document.getElementsByClassName("navbar")[0].style.top="-100px";
-                document.getElementsByClassName("navbar")[0].style.transition="0.5s";
+            else {
+                document.getElementsByClassName("navbar")[0].style.top = "-100px";
+                document.getElementsByClassName("navbar")[0].style.transition = "0.5s";
             }
 
-            prevScroll=currScroll;
+            prevScroll = currScroll;
 
         }
 
         var slideIndex = 0;
         showSlides();
-        
+
 
         function showSlides() {
             var i;
