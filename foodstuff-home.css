@@ -171,7 +171,7 @@ body {
 
 .header {
     min-height: 100vh;
-    background: url('/pic/wall.jpg') center/cover no-repeat fixed;
+    background: url('pic/wall.jpg') center/cover no-repeat fixed;
     margin-top: auto;
 }
 
@@ -293,7 +293,7 @@ body {
 
 .menu-image {
     min-height: 80vh;
-    background: url('/pic/catering.jpg')center/cover fixed no-repeat;
+    background: url('pic/catering.jpg')center/cover fixed no-repeat;
 }
 
 .menu-text {
