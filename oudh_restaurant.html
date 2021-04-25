@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b8625aff4c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="oudh.js"></script>
+    <link rel="stylesheet" href="oudh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <!-- <script type="text/javascript" src="javascrip.js"></script> -->
+    <title>Oudh 1590</title>
+</head>
+
+
+<body>
+    <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <p class="navbar-brand hover-underline-animation" href="#" style="color: black;">Foodstuff</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="index.html" style="color: black;">Home</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="restaurantsearch.html" style="color:black;">Eatery</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="caterersearch.html" style="color: black;">Caterers</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <span class="fa-stack  has-badge cart" data-count="0" onclick="showlist()">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="tb" style="display: none;">
+            <h1 style="text-align: center;">My Cart</h1>
+            <span onclick="closediv()" class="close" title="Close Modal">&times;</span>
+            <table id="tab1" class="table" style="margin:auto">
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price(unit)</th>
+                    <th>Price(Total)</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <h4 id="total" style="float:right; padding-right: 180px;"></h4>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="dishes" style="padding-top: 100px;">
+        <!-- <div class="row" style="padding-bottom: 15px; background-color: aqua;">
+            <div class="col-md-6">
+                <img src="/pic/oudh heading.jpg" style="height: 60%; width: 100%;">
+            </div>
+            <div class="col-md-6">
+
+                <h1 style="font-weight: bold; text-align: center;">Oudh 1590</h1>
+                <span style="color:rgb(131, 129, 129); font-weight: bolder; margin: auto; "><i class="fa fa-map-marker"
+                        style="color:rgb(3, 3, 3); font-size: large; "></i> P-562 Hemanta Mukhopadhyay,
+                    opp. Kamala Girls School, Hemanta Mukherjee Sarani, Kolkata, West Bengal 700029
+                    <br><i class="fa fa-clock-o" style="color: rgb(0, 0, 0);"></i> 11 A.M - 10 P.M
+                    <br> <i class="fa fa-money" style="color: rgb(5, 5, 5); font-size: large;"></i> ₹1000 for two
+                </span></p>
+            </div>
+
+        </div> -->
+
+        <div class="card2 mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="/pic/oudh heading.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8" style="display: flex; justify-content: center; align-items: center; ">
+                    <div class="card-body">
+                        <h5 class="card-title">Oudh 1590</h5>
+                        <br>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> P-562 Hemanta Mukhopadhyay, <br>
+                            opp. Kamala Girls School, Hemanta Mukherjee Sarani, <br> Kolkata, West Bengal 700029
+                            <br>
+                            <i class="fa fa-clock-o" style="color: rgb(0, 0, 0);"></i> 11 A.M - 10 P.M
+                            <br>
+                            <i class="fa fa-money" style="color: rgb(5, 5, 5); font-size: large;"></i> ₹1000 for two
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron" style="background-color: bisque;">
+            <p style="font-size: large; padding-left:20px; text-align: center; line-height:1.5;" data-aos="fade-up"
+                data-aos-duration="1000">
+                Oudh 1590, as the name suggests, is a true period dining experience
+                in the heart of South Kolkata. The restaurant is small and dimly lit,
+                with interiors of carved wood and artwork from the era illuminated by ornate,
+                classic lamp fixtures mounted high along the walls. The menu caters to a broad
+                range of tastes, and while we’d especially recommend the vegetable kathi rolls
+                to start, for the main course you’ll be equally impressed with the tandoori chicken,
+                the mutton galawati kabab, or the awadhi handi biryani. </p>
+
+            <div style="display: flex; justify-content: center;" data-aos="fade-up" data-aos-duration="1000">
+                <a href="#menu"><button id="explore">Explore Our Food</button></a>
+            </div>
+
+
+        </div>
+
+        <div class="ambience" style="overflow: hidden;" data-aos="fade-up" data-aos-duration="1000">
+            <h3 style="text-align: center;">Ambience</h3>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="pic/oudh ambience1.jpg" style="height: 300px; width:100%;">
+                </div>
+                <div class="col-sm-4">
+                    <img src="pic/oudh ambience2.jpg" style="height: 300px; width:100%;">
+                </div>
+                <div class="col-sm-4">
+                    <img src="pic/oudh ambience3.jpg" style="height: 300px; width:100%;">
+                </div>
+            </div>
+        </div>
+
+
+        <div id="tab" class="nav nav-tabs">
+            <button data-toggle="tab" href="#starters">Starter</button>
+            <button data-toggle="tab" href="#chinese">Chinese</button>
+            <button data-toggle="tab" href="#Indian-cuisine">Indian</button>
+            <button data-toggle="tab" href="#Desert">Desert</button>
+        </div>
+        <div id="menu" class="tab-content">
+            <div id="starters" class="tab-pane active tabcontent tabbackground">
+                <div class="head-content">
+                    <h1 class="tabHeading">Starter</h1>
+                    <!-- <input type="text" placeholder="Search" id="ip1" class="ip-search"> -->
+
+                    <!-- Actual search box -->
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" id="ip1" placeholder="Search">
+                    </div>
+                    <div id="contents-starter">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Price</a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="veg(this)" id="veg">
+                                    Veg</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="nonveg(this)"
+                                        id="non-veg"> Non-Veg</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="lowtohigh(this)"
+                                        id="lh">
+                                    Low to high</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="hightolow(this)"
+                                        id="hl">
+                                    High to low</input></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="starter-food" class="contents row container-fluid">
+
+                </div>
+            </div>
+
+            <div id="chinese" class="tab-pane tabcontent tabbackground">
+                <div class="head-content">
+                    <h1 style="text-align: left;" class="tabHeading">Chinese</h1>
+                    <!-- <input type="text" placeholder="Search" id="ip2" class="ip-search"> -->
+                    <!-- Actual search box -->
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" id="ip2" placeholder="Search">
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Filters
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Price</a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="veg(this)" id="veg">
+                                Veg</input></a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="nonveg(this)"
+                                    id="non-veg">
+                                Non-Veg</input></a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                Low to high</input></a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                High to low</input></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="chinese-food" class=" contents row container-fluid">
+                </div>
+            </div>
+
+
+            <div id="Indian-cuisine" class="tab-pane tabcontent tabbackground">
+                <div class="head-content">
+                    <h1 style="text-align: left;" class="tabHeading">Indian Cuisine</h1>
+                    <!-- <input type="text" placeholder="Search" id="ip3" class="ip-search"> -->
+                    <!-- Actual search box -->
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" id="ip3" placeholder="Search">
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Filters
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Price</a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="veg(this)" id="veg">
+                                Veg</input></a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="nonveg(this)"
+                                    id="non-veg"> Non-Veg</input></a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                Low to high</input></a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                High to low</input></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Indian-food" class="contents row container-fluid">
+                </div>
+            </div>
+
+
+
+            <div id="Desert" class="tab-pane tabcontent tabbackground">
+                <div class="head-content">
+                    <h1 style="text-align: left;" class="tabHeading">Desert</h1>
+                    <!-- <input type="text" placeholder="Search" id="ip4" class="ip-search"> -->
+                    <!-- Actual search box -->
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" id="ip4" placeholder="Search">
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Filters
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Price</a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="veg(this)" id="veg">
+                                Veg</input></a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="nonveg(this)"
+                                    id="non-veg"> Non-Veg</input></a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                Low to high</input></a>
+                            <a class="dropdown-item" href="#"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                High to low</input></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="desert-food" class="contents row container-fluid">
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <br>
+        <div id="buts">
+            <button class="btn btn-primary" onclick="showlist()">Show Cart</button>
+            <button class="btn btn-primary" onclick="discard()">Discard Cart</button>
+        </div>
+
+    </div>
+    <br><br>
+    <div id="buttom-nav" class="">
+        <a href="index.html"><button><i class="fas fa-home"></i> <br> Home </button></a>
+        <a href="restaurantsearch.html"><button> <i class="fas fa-utensils"></i> <br> Explore </button></a>
+        <a href="caterersearch.html"><button><i class="fas fa-hamburger"></i> <br> Caterers </button></a>
+        <button><span class="fa-stack  has-badge cart" data-count="0" onclick="showlist()">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i><br>Cart
+            </span></button>
+    </div>
+
+
+    </div>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

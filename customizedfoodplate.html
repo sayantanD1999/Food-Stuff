@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="customizedfoodplate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b8625aff4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="customizedfoodplate.js"></script>
+    <title>Customized Food Plate </title>
+</head>
+
+
+<body data-spy="scroll">
+    <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <p class="navbar-brand hover-underline-animation" href="#" style="color: black;">Foodstuff</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-lg-auto" style="float: right;">
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="index.html" style="color: black;">Home</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="restaurantsearch.html" style="color:black;">Eatery</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="caterersearch.html" style="color: black;">Caterers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
+        <div id="order_table" style="display: none;">
+            <span onclick="closediv()" class="close" title="Close Modal">&times;</span>
+            <h2>Starter</h2>
+            <table id="tab1" class="table">
+                <tr>
+                    <th>Item</th>
+                    <th>Price (Unit  ₹)</th>
+                    <th>Quantity</th>
+                    <th>Total price</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            <h2>Maincourse</h2>
+            <table id="tab2" class="table2">
+                <tr>
+                    <th>Item</th>
+                    <th>Price (Unit  ₹)</th>
+                    <th>Quantity</th>
+                    <th>Total price</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            <h2>Desert</h2>
+            <table id="tab3" class="table3">
+                <tr>
+                    <th>Item</th>
+                    <th>Price (Unit  ₹)</th>
+                    <th>Quantity</th>
+                    <th>Total price</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br><br>
+            <h2 id="total" style="text-align:center;"></h2>
+        </div>
+        <div id="frontPage">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="text">
+                        <h1 id="heading">
+                            myMandap Catering Services
+                        </h1>
+                        <br><br>
+                        <p class="description">
+                            Here you can select your own choice of food items
+                            to decorate the food plates for your esteemed
+                            guests. You can make changes according to your choice.
+                            We are providing varied choice of dishes in all
+                            types with different of range of prices. You will also be provided with our our <strong>customized
+                            choices </strong>  of dishes or youcan choose the various type of packages we offer packages we offer.
+                            We gurantee you to provide our best service which we have kept a reputation for more than 25 years.
+                        </p>
+                        <br>
+                        <a href="#inputDetailBox"><button class="btn1" onclick="getStarted()">Let's Get
+                                Started</button></a>
+                    </div>
+                </div>
+                <div class="col-md-6" id="imageslide">
+                    <div class="image fade">
+                        <img src="pic/landingpage.png" style="height:100%; width: 95%;" alt="">
+                    </div>
+                    <div class="image fade">
+                        <img src="pic/landingpage2.png" style="height:100%; width: 95%;" alt="">
+                    </div>
+                    <div class="image fade">
+                        <img src="pic/landingpage3.png" style="height:100%; width: 95%;" alt="">
+                    </div>
+                    <div class="image fade">
+                        <img src="pic/landingpage4.png" style="height:100%; width: 95%;" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <section id="inputDetailBox">
+
+            <div class="row" style="padding-top: 80px;">
+                <div class="col-md-4 card-holder" data-aos="fade-up" data-aos-duration="1000" >
+                    <div class="card" id="gt" >
+                        <img class="card-img-top2" src="pic/thaali1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title" >Get Together</h5>
+                          <p class="card-text" >Dish emphasizes on small ocassional get-together, inludes in our customized package.</p>
+                          <br>
+                          <a href="#" class="btn btn-primary">₹ 270</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-holder" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card" id="bd" >
+                        <img class="card-img-top2" src="pic/thaali2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Birthday Special</h5>
+                          <p class="card-text">Dish emphasizes on large birthday celebration and get-together, inludes in our customized package.</p>
+                          <br>
+                          <a href="#" class="btn btn-primary">₹ 450</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-holder" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card" id="wd" >
+                        <img class="card-img-top2" src="pic/thaali3.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Wedding Special</h5>
+                          <p class="card-text">Dish emphasizes on large fat Indian weddings and other socio-cultural events, inludes in our customized package.</p>
+                          
+                          <a href="#" class="btn btn-primary">₹ 950</a>
+                        </div>
+                    </div>
+                </div>
+                                    
+            </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/pic/undraw_breakfast_psiw.png" id="animate" style="height: 70%; width: 70%;" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="plates">
+                            <h3>Enter number of plates</h3>
+                            <button id="ipButton" onclick="decrement()"><i class="fas fa-minus"></i></button>
+                            <input placeholder="No of plates" type=number value="0" id="heads" min="0">
+                            <button id="ipButton" onclick="increment()"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br><br><br>
+
+
+
+            <div id="tab" class="nav nav-tabs">
+                <button data-toggle="tab" href="#starters">Starters</button>
+                <button data-toggle="tab" href="#maincourse">Maincourse</button>
+                <button data-toggle="tab" href="#desert">Desert</button>
+            </div>
+            <div class="tab-content">
+                <div id="starters" class="tab-pane active tabContentStarter tabcontent ">
+                    <div class="head-content">
+                        <h1 class="tabHeading" style="text-align: left;">Starters</h1>
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip1" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <p class="dropdown-item">Price</p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="veg(this,'contents-starter')"
+                                        id="veg">
+                                    Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="nonveg(this)" id="non-veg">
+                                    Non-Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                    Low to high</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                    High to low</input></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contents-starter" class="contents row container-fluid">
+                    </div>
+                </div>
+                <div id="maincourse" class="tab-pane tabContentMaincourse tabcontent">
+                    <div class="head-content">
+                        <h1 class="tabHeading" style="text-align: left;">Maincourse</h1>
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip2" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <p class="dropdown-item">Price</p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="veg(this,'contents-starter')"
+                                        id="veg">
+                                    Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="nonveg(this)" id="non-veg">
+                                    Non-Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                    Low to high</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                    High to low</input></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contents-maincourse" class="contents row container-fluid">
+                    </div>
+                </div>
+                <div id="desert" class="tab-pane tabContentDesert tabcontent">
+                    <div class="head-content">
+                        <h1 class="tabHeading" style="text-align: left;">Desert</h1>
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip3" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <p class="dropdown-item">Price</p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="veg(this,'contents-starter')"
+                                        id="veg">
+                                    Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="nonveg(this)" id="non-veg">
+                                    Non-Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                    Low to high</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                    High to low</input></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contents-desert" class="contents row container-fluid">
+                    </div>
+                </div>
+            </div>
+            <br><br>
+
+            <div id="buttonsContainer">
+                <button class="btn btn-primary" id="but1" onclick="addtoplate()">Add to plate</button>
+                <button class="btn btn-primary" id="but2" disabled onclick="showplate()">Show Plate</button>
+                <button class="btn btn-primary" onclick="discardplate()">Discard Plate</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <br><br><br>
+
+    <div id="buttom-nav" class="">
+        <a href="index.html"><button ><i class="fas fa-home"></i> <br> Home </button></a>
+        <a href="restaurantsearch.html"><button > <i class="fas fa-utensils"></i> <br> Explore </button></a>
+        <a href="caterersearch.html"><button ><i class="fas fa-hamburger"></i> <br> Caterers </button></a>
+    </div>
+    </div>
+
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("image");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        var prevScroll = window.pageYOffset;
+        window.onscroll = function () {
+            var currScroll = window.pageYOffset;
+            if (prevScroll > currScroll) {
+                document.getElementsByClassName("navbar")[0].style.top = "0";
+                document.getElementsByClassName("navbar")[0].style.transition = "0.5s";
+            }
+            else {
+                document.getElementsByClassName("navbar")[0].style.top = "-100px";
+                document.getElementsByClassName("navbar")[0].style.transition = "0.5s";
+            }
+
+            prevScroll = currScroll;
+
+        }
+
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
