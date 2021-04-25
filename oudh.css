@@ -348,7 +348,7 @@ cursor: pointer;
 }
 
 .tabbackground {
-    background-image: url(/pic/oudh-order.jpg);
+    background-image: url(pic/oudh-order.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
