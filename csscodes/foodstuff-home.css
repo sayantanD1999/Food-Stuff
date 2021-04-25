@@ -293,7 +293,7 @@ body {
 
 .menu-image {
     min-height: 80vh;
-    background: url('/pic/catering.jpg')center/cover fixed no-repeat;
+    background: url('https://sayantand1999.github.io/Food-Stuff/pic/catering.jpg')center/cover fixed no-repeat;
 }
 
 .menu-text {
