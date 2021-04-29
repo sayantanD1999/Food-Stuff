@@ -84,7 +84,7 @@ body{
     color: rgb(0, 0, 0);
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 520px) {
     #heading{
         text-align: center;
         margin-left: 0px !important;
