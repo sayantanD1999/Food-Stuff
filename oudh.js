@@ -1,22 +1,3 @@
-// var prevScroll = window.pageYOffset;
-// window.onscroll=function(){
-//     var currScroll = window.pageYOffset;
-//     if (prevScroll>currScroll)
-//     {
-//         document.getElementsByClassName("navbar")[0].style.top="0";
-//         document.getElementsByClassName("navbar")[0].style.transition="0.5s";
-//     }
-//     else{
-//         document.getElementsByClassName("navbar")[0].style.top="-100px";
-//         document.getElementsByClassName("navbar")[0].style.transition="0.5s";
-//     }
-
-//     prevScroll=currScroll;
-
-// }
-
-
-
 function veg(item) {
     var div = item.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
     let id = div.id;
@@ -237,7 +218,7 @@ window.onload = () => {
                 if (data[i].type == "starter") {
                     starterfood += `
                     <div class="card">
-                    <img class="card-img-top" src=${data[i].img} alt="Card image cap">
+                    <img class="card-img-top" src=${data[i].img} loading="eager" alt="Card image cap">
                     <div class="card-body">
                         <p><span style="font-weight: bolder; font-size: larger;">${data[i].dishname}<br>
                             <h5 class="card-title">${data[i].cost}</h5>
@@ -255,7 +236,7 @@ window.onload = () => {
                 if (data[i].type == "Indian-Cuisine") {
                     indiancuisinefood += `
                     <div class="card">
-                    <img class="card-img-top" src=${data[i].img} alt="Card image cap">
+                    <img class="card-img-top" src=${data[i].img} loading="eager" alt="Card image cap">
                     <div class="card-body">
                         <p><span style="font-weight: bolder; font-size: larger;">${data[i].dishname}<br>
                             <h5 class="card-title">${data[i].cost}</h5>
@@ -272,7 +253,7 @@ window.onload = () => {
                 if (data[i].type == "chinese") {
                     chinesefood += `
                     <div class="card">
-                    <img class="card-img-top" src=${data[i].img} alt="Card image cap">
+                    <img class="card-img-top" src=${data[i].img} loading="eager" alt="Card image cap">
                     <div class="card-body">
                         <p><span style="font-weight: bolder; font-size: larger;">${data[i].dishname}<br>
                             <h5 class="card-title">${data[i].cost}</h5>
@@ -290,7 +271,7 @@ window.onload = () => {
                 if (data[i].type == "desert") {
                     desertfood += `
                     <div class="card">
-                    <img class="card-img-top" src=${data[i].img} alt="Card image cap">
+                    <img class="card-img-top" src=${data[i].img} loading="eager" alt="Card image cap">
                     <div class="card-body">
                         <p><span style="font-weight: bolder; font-size: larger;">${data[i].dishname}<br>
                             <h5 class="card-title">${data[i].cost}</h5>
