@@ -40,7 +40,7 @@ window.onload = () => {
                         <div class="card mb-3 catererDiv">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                            <img src=${data[i].img} class="card-img" alt="...">
+                            <img src=${data[i].img} loading="eager" class="card-img" alt="...">
                             </div>
                             <div class="col-md-8">
                             <div class="card-body">
