@@ -208,7 +208,7 @@ window.onload = () => {
                     starter +=
                         `
                         <div id="tr" class="card" onclick="selectDiv(this)">
-                        <img class="card-img-top" src=${data[i].img} alt="Card image cap">
+                        <img class="card-img-top" src=${data[i].img} loading="eager" alt="Card image cap">
                         <div class="card-body">
                             <p>
                             ${data[i].name}<br>
@@ -225,7 +225,7 @@ window.onload = () => {
                     maincourse +=
                         `
                         <div id="tr" class="card" onclick="selectDiv(this)">
-                        <img class="card-img-top" src=${data[i].img} alt="Card image cap">
+                        <img class="card-img-top" src=${data[i].img} alt="Card image cap" loading="eager">
                         <div class="card-body">
                             <p>${data[i].name}<br>
                             
@@ -241,7 +241,7 @@ window.onload = () => {
                     desert +=
                         `
                         <div id="tr" class="card" onclick="selectDiv(this)">
-                        <img class="card-img-top" src=${data[i].img} alt="Card image cap">
+                        <img class="card-img-top" src=${data[i].img} alt="Card image cap" loading="eager">
                         <div class="card-body">
                             <p>${data[i].name}<br>
                             
