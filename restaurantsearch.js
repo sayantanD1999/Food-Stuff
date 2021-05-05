@@ -36,7 +36,7 @@ window.onload = () => {
             for (let i = 0; i < data.length; i++) {
                 eatery += `
             <div class="card">
-            <img class="card-img-top" src=${data[i].img} alt="Card image cap">
+            <img class="card-img-top" src=${data[i].img} loading="eager" alt="Card image cap">
                 <div class="card-body">
                     <p><span style="font-weight: bolder; font-size: larger;">${data[i].dishname}<br>
                         <h5 class="card-title">${data[i].name}</h5>
