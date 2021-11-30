@@ -64,6 +64,9 @@ h1,h2,h3,h4,h5,h6{
 }
 
 @media screen and (width: 768px){
+    .navbar{
+        display: none !important;
+    }
     .modal_img{
         margin: auto;
         width: 210px;
@@ -72,6 +75,9 @@ h1,h2,h3,h4,h5,h6{
         margin-bottom: 10px;
         margin-top: 10px;
     }   
+    .slide-container {
+        padding-top: 15px !important;
+    }
 }
 
 #buttom-nav {
@@ -521,3 +527,24 @@ body {
     flex: 33.33%;
     padding: 10px;
 }
+
+
+@media screen and (min-width: 280px) and (max-width: 840px)
+{
+    #buttom-nav{
+        display: block;
+    }
+}
+ 
+  @media screen and (max-width: 520px) {
+    #buttom-nav {
+      display: block;
+    }
+    }
+  
+  @media screen and (width: 540px) {
+    #buttom-nav {
+      display: block;
+    }
+    }
+  
