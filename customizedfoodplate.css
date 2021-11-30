@@ -405,7 +405,7 @@ button {
     color: #07588a;
   }
 
-@media screen and (max-width: 420px) {
+@media screen and (min-width: 280px) and (max-width: 880px) {
   .tabHeading {
     display: none;
   }
