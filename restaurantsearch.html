@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/b8625aff4c.js" crossorigin="anonymous"></script>
+    <script src="restaurantsearch.js"></script>
+    <link rel="stylesheet" href="restaurantsearch.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+    <title>Eatery</title>
+</head>
+
+
+<body>
+    <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <p class="navbar-brand hover-underline-animation" href="#">Foodstuff</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="index.html" style="color: black;">Home</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="restaurantsearch.html" style="color:black;">Eatery</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="caterersearch.html" style="color: black;">Caterers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="template-div">
+        <div id="template-container" data-aos="fade-down" data-aos-duration="1000">
+            <p id="template-text">Since it is a beta version i.e on testing period you are hereby
+                requested to go through only <strong>"Oudh"</strong> restaurant template because rest are just for
+                decoration purpose with no functionality. </p>
+
+            <button onclick="showcontent()" class="btn btn-primary">Ok</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="box">
+
+        <!-- Actual search box -->
+        <div class="form-group has-search">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" id="ip" placeholder="Search">
+        </div>
+
+
+        <div id="demo" class="row container" data-aos="fade-up" data-aos-duration="1000"></div>
+    </div>
+
+    <div id="buttom-nav">
+        <a href="index.html"><button><i class="fas fa-home"></i> <br> Home </button></a>
+        <a href="restaurantsearch.html"><button> <i class="fas fa-utensils"></i> <br> Explore </button></a>
+        <a href="caterersearch.html"><button><i class="fas fa-hamburger"></i> <br> Caterers </button></a>
+    </div>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

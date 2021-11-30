@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b8625aff4c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="oudh.js"></script>
+    <link rel="stylesheet" href="oudh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- <script type="text/javascript" src="javascrip.js"></script> -->
+    <title>Oudh 1590</title>
+</head>
+
+
+<body>
+    <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <p class="navbar-brand hover-underline-animation" href="#" style="color: black;">Foodstuff</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="index.html" style="color: black;">Home</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="restaurantsearch.html" style="color:black;">Eatery</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="caterersearch.html" style="color: black;">Caterers</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <span class="fa-stack  has-badge cart" data-count="0" onclick="showlist()">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="tb" style="display: none;">
+            <h1>My Cart</h1>
+            <span onclick="closediv()" class="close" title="Close Modal">&times;</span>
+            <table id="tab1" class="table" style="margin:auto">
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price(unit)</th>
+                    <th>Price(Total)</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <h4 id="total" style="float:right; padding-right: 180px;"></h4>
+            
+            <br>
+            
+            <hr>
+
+            <div style="display: flex; justify-content: space-evenly;">
+                <button class="btn btn-danger" onclick="discardplate()">Discard Plate</button>
+                <h3>Or</h3>
+                <button class="btn btn-success" onclick="show_payment_page()">
+                  Confirm Booking <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+    
+    
+            <div class="payment_container container" id="payment_page">
+                <div class="row">
+                  <div class="col-md-4 left_div">
+                    <h2>Payment Details</h2>
+                    <br>
+                    <p><i class="fas fa-user"></i> User Name</p>
+                    <input type="text" placeholder="Enter Your Name" class="form_ip">
+                    <hr>
+                    <p><i class="fas fa-money-check-alt"></i> Order Total</p>
+                    <h2 id="set_price">$500</h2>
+                    <hr>
+                    <p><i class="far fa-calendar-check"></i> Date</p>
+                    <h2 id="set_date">23.07.2021</h2>
+                    <hr>
+                    <p><i class="fas fa-utensils"></i> Issuer</p>
+                    <h2>Oudh 1590</h2>
+                    <hr>
+                    <p><i class="fas fa-map-marker-alt"></i> Address</p>
+                    <input type="text" placeholder="Set Delivery Address" class="form_ip">
+                    <hr>
+                    <p><i class="far fa-lightbulb"></i> Expected Delivery</p>
+                    <h2 id="set_delivery_date"></h2>
+                  </div>
+                  <div class="col-md-8">
+                    <center><h1>Payment Methods</h1></center>
+          
+                    <div class="btn_div">
+                      <button class="net_banking_btn">Net Banking</button>
+                    </div>
+                    <div class="line_div">
+                      <div class="line"></div>
+                      <p>Or</p>
+                      <div class="line"></div>
+                    </div>
+                    <p><b>UPI</b></p>
+                    <input
+                      type="text"
+                      class="payment_ip"
+                      placeholder="e.g - abc@upi_id"
+                    />
+                    <div class="line_div">
+                      <div class="line"></div>
+                      <p>Or</p>
+                      <div class="line"></div>
+                    </div>
+                    <p><b>Card</b></p>
+                    <div class="debit_card">
+                      <div
+                        style="width: 100%; display: flex; justify-content: space-between"
+                      >
+                        <p id="card-header">mastercard</p>
+                        <i class="fab fa-cc-mastercard"></i>
+                      </div>
+                      <div>
+                        <i class="fas fa-sim-card"></i>
+                      </div>
+        
+                      <p style="margin-top: 10px; color: #fff;"><b>NUMBER</b></p>
+                      <div id="number_div">
+                        <input
+                          type="password"
+                          name=""
+                          class="card_number"
+                          placeholder="1234"
+                          inputmode="tel"
+                        />
+                        <input
+                          type="password"
+                          name=""
+                          placeholder="5678"
+                          class="card_number"
+                          inputmode="tel"
+                        />
+                        <input
+                          type="password"
+                          name=""
+                          placeholder="9153"
+                          class="card_number"
+                          inputmode="tel"
+                        />
+                        <input
+                          type="password"
+                          name=""
+                          placeholder="1234"
+                          class="card_number"
+                          inputmode="tel"
+                        />
+                      </div>
+                      <div style="display: flex; margin-top: 20px;" >
+                        <div style="width: 60%">
+                          <span style="color: rgb(255, 255, 255)">NAME</span>
+                          <input type="text" placeholder="Jane Doe" id="name_ip" />
+                        </div>
+                        <div style="width: 40%">
+                          <span style="color: rgb(255, 255, 255)">EXPIRY DATE</span>
+                          <br />
+                          <input
+                            type="text"
+                            name=""
+                            class="exp_ip"
+                            placeholder="month"
+                            id=""
+                          />
+                          <span style="color: #fff">/</span
+                          ><input
+                            type="text"
+                            placeholder="year"
+                            class="exp_ip"
+                            name=""
+                            id=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line_div">
+                        <div class="line"></div>
+                        <p>Or</p>
+                        <div class="line"></div>
+                      </div>
+                      <div class="btn_div">
+                        <button class="cod_btn">
+                            Cash On Delivery <input type="checkbox" name="" id="">
+                          </button>
+                      </div>
+                    <div class="btn_div">
+                      <button class="make_payment_btn">
+                        Make Payment <i class="fas fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+        </div>
+    </div>
+
+
+    <div class="container" id="dishes">
+        <div class="card2 mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="pic/oudh heading.jpg" class="card-img" id="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1>Oudh 1590</h1>
+                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> P-562 Hemanta Mukhopadhyay,</p>
+                            <p>opp. Kamala Girls School, Hemanta Mukherjee Sarani,</p>
+                            <p>Kolkata, West Bengal 700029</p> 
+                            
+                            <p>                            <i class="fa fa-clock-o" style="color: rgb(0, 0, 0);"></i> 11 A.M - 10 P.M
+                            </p>
+                            
+                            <p>
+                                <i class="fa fa-money" style="color: rgb(5, 5, 5); font-size: large;"></i> ₹1000 for two
+
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron" style="background-color: rgb(243, 243, 243);" data-aos="fade-up"
+        data-aos-duration="1000" >
+            <p style="font-size: large; padding-left:20px; text-align: center; line-height:1.5;">
+                Oudh 1590, as the name suggests, is a true period dining experience
+                in the heart of South Kolkata. The restaurant is small and dimly lit,
+                with interiors of carved wood and artwork from the era illuminated by ornate,
+                classic lamp fixtures mounted high along the walls. The menu caters to a broad
+                range of tastes, and while we’d especially recommend the vegetable kathi rolls
+                to start, for the main course you’ll be equally impressed with the tandoori chicken,
+                the mutton galawati kabab, or the awadhi handi biryani. </p>
+
+            <div style="display: flex; justify-content: center;" >
+                <a href="#menu"><button id="explore">Explore Our Food</button></a>
+            </div>
+
+
+        </div>
+
+        <div class="ambience" style="overflow: hidden;" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Ambience</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="pic/oudh ambience1.jpg" class="ambience_img" >
+                </div>
+                <div class="col-md-4">
+                    <img src="pic/oudh ambience2.jpg" class="ambience_img" >
+                </div>
+                <div class="col-md-4">
+                    <img src="pic/oudh ambience3.jpg" class="ambience_img" >
+                </div>
+            </div>
+        </div>
+        <div id="big_div" class="container">
+
+            <div class="container table_booking">
+                <center><h1>Reservation</h1></center> 
+                <div class="reservation_div">
+                    <div class="reservation_img_div"></div>
+                    <div class="main_container">
+                      <div class="box row">
+                        <div class="col-md-6">
+                          <p class="label">Name :</p>
+                          <input type="text" class="reservation_ip" placeholder="Jane Doe" />
+                          <p class="label">Phone :</p>
+                          <input
+                            type="text"
+                            class="reservation_ip"
+                            placeholder="9845612256"
+                            inputmode="numeric"
+                          />
+                          <p class="label">Date :</p>
+                          <input type="date" class="reservation_ip" placeholder="Jane Doe" />
+                        </div>
+                        <div class="col-md-6">
+                          <p class="label">Email :</p>
+                          <input
+                            type="email"
+                            class="reservation_ip"
+                            placeholder="jd@gmail.com"
+                          />
+                          <p class="label">No. of guests :</p>
+                          <input
+                            type="text"
+                            class="reservation_ip"
+                            placeholder="6"
+                            inputmode="numeric"
+                          />
+                          <p class="label">Time :</p>
+                          <input type="time" class="reservation_ip" />
+                        </div>
+                        <button id="book_btn">Book Table</button>
+                      </div>
+                      <div class="time_container">
+                        <center>
+                          <h2 style="font-style: italic; color: #fff">Time Slot</h2>
+                        </center>
+                        <br />
+                        <div>
+                          <p class="day">Monday</p>
+                          <p class="slot">11:00 am - 11:00 pm</p>
+                        </div>
+                        <div>
+                          <p class="day">Tuesday</p>
+                          <p class="slot">11:00 am - 11:00 pm</p>
+                        </div>
+                        <div>
+                          <p class="day">Wednesday</p>
+                          <p class="slot">11:00 am - 11:00 pm</p>
+                        </div>
+                        <div>
+                          <p class="day">Thursday</p>
+                          <p class="slot">11:00 am - 11:00 pm</p>
+                        </div>
+                        <div>
+                          <p class="day">Friday</p>
+                          <p class="slot">11:00 am - 11:00 pm</p>
+                        </div>
+                        <div>
+                          <p class="day">Saturday</p>
+                          <p class="slot">02:00 pm - 02:00 am</p>
+                        </div>
+                        <div>
+                          <p class="day">Sunday</p>
+                          <p class="slot">02:00 pm - 02:00 am</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div id="tab" class="container">
+                <button onclick="changeTab(this,'starters')" href="#starters" class="active" >Starter</button>
+                <button onclick="changeTab(this,'chinese')" href="#chinese">Chinese</button>
+                <button onclick="changeTab(this,'Indian-cuisine')" href="#Indian-cuisine">Indian</button>
+                <button onclick="changeTab(this,'Desert')" href="#Desert">Desert</button>
+            </div>
+            <div id="menu" class="tab-content">
+                <div id="starters" class="tabcontent">
+                    <div class="head-content">
+                        <h1 class="tabHeading">Starter</h1>
+    
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip1" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+    
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Filters
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Price</a>
+                                    <a class="dropdown-item" href="#"><input type="checkbox" onclick="veg(this)" id="veg">
+                                        Veg</input></a>
+                                    <a class="dropdown-item" href="#"><input type="checkbox" onclick="nonveg(this)"
+                                            id="non-veg"> Non-Veg</input></a>
+                                    <a class="dropdown-item" href="#"><input type="checkbox" onclick="lowtohigh(this)"
+                                            id="lh">
+                                        Low to high</input></a>
+                                    <a class="dropdown-item" href="#"><input type="checkbox" onclick="hightolow(this)"
+                                            id="hl">
+                                        High to low</input></a>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div id="starter-food" class="contents row">
+    
+                    </div>
+                </div>
+    
+                <div id="chinese" class="tabcontent ">
+                    <div class="head-content">
+                        <h1 class="tabHeading">Chinese</h1>
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip2" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Price</a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="veg(this)" id="veg">
+                                    Veg</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="nonveg(this)"
+                                        id="non-veg">
+                                    Non-Veg</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                    Low to high</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                    High to low</input></a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div id="chinese-food" class=" contents row">
+                    </div>
+                </div>
+            
+                <div id="Indian-cuisine" class="tabcontent ">
+                    <div class="head-content">
+                        <h1 class="tabHeading">Indian Cuisine</h1>
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip3" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Price</a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="veg(this)" id="veg">
+                                    Veg</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="nonveg(this)"
+                                        id="non-veg"> Non-Veg</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                    Low to high</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                    High to low</input></a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="Indian-food" class="contents row">
+                    </div>
+                </div>
+    
+                <div id="Desert" class="tabcontent ">
+                    <div class="head-content">
+                        <h1 class="tabHeading">Desert</h1>
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip4" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Price</a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="veg(this)" id="veg">
+                                    Veg</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="nonveg(this)"
+                                        id="non-veg"> Non-Veg</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                    Low to high</input></a>
+                                <a class="dropdown-item" href="#"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                    High to low</input></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="desert-food" class="contents row">
+    
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="buttom-nav">
+        <a href="index.html"><button><i class="fas fa-home"></i> <br> Home </button></a>
+        <a href="restaurantsearch.html"><button> <i class="fas fa-utensils"></i> <br> Explore </button></a>
+        <a href="caterersearch.html"><button><i class="fas fa-hamburger"></i> <br> Caterers </button></a>
+        <button><span class="fa-stack  has-badge cart" data-count="0" onclick="showlist()">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i><br>Cart
+            </span></button>
+    </div>
+
+
+    </div>
+    <script>
+
+        document.getElementsByClassName('tabcontent')[0].style.display = "block";
+
+        function changeTab(but,n){
+            var tabs = document.getElementsByClassName('tabcontent');
+            for(let i=0;i<tabs.length;i++)
+            {
+                tabs[i].style.display = "none";
+            }
+            document.getElementById(n).style.display = "block";
+            var tab_btn = document.querySelectorAll("#tab button");
+            for(let i=0;i<tab_btn.length;i++)
+            {
+                tab_btn[i].classList.remove('active');
+            }
+            but.classList.add('active');
+        }
+        AOS.init();
+        console.log(window.innerWidth);
+
+        window.onscroll = function() {myFunction()};
+        
+        var navbar = document.getElementById('tab');
+        var sticky = navbar.offsetTop;
+            function myFunction() {
+            
+                let width = window.innerWidth;
+                if(width<800){
+                    if (window.pageYOffset>= sticky ) {
+                navbar.classList.add("sticky");
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                }
+                else{
+                    if (window.pageYOffset+86>= sticky ) {
+                navbar.classList.add("sticky");
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                }
+
+                if(width==768){
+                    if (window.pageYOffset>= sticky ) {
+                navbar.classList.add("sticky");
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                }
+
+
+            }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

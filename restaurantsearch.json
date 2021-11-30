@@ -1,0 +1,85 @@
+[
+    {
+        "img": "pic/oudh-chilli-chicken.jpg",
+        "dishname": "Chilli Chicken",
+        "name": "Oudh 1590",
+        "address": "Hemanta Mukherjee Sarani, Kolkata, West Bengal 700029",
+        "time": "11 A.M -10 P.M",
+        "link": "oudh_restaurant.html",
+        "cost": "1000 for two"
+    },
+    {
+        "img": "pic/panna-dish.jpg",
+        "dishname": "Garlic Chicken",
+        "name": "Panna's Kitchen",
+        "address": "54, Diamond Harbour Rd, Behala, Kolkata",
+        "time": "11 A.M -10 P.M",
+        "link": "oudh_restaurant.html",
+        "cost": "700 for two"
+    },
+
+    {
+        "img": "pic/barbeque-nation-dum-dum.jpg",
+        "dishname": "Roasted Sizzlings",
+        "name": "Barbeque Nation",
+        "address": " 4th Floor, DIAMOND PLAZA Diamond City Mall, 68, Jessore Rd, Kolkata",
+        "time": "11 A.M -10 P.M",
+        "link": "oudh_restaurant.html",
+        "cost": "1200 per head"
+    },
+    {
+        "img": "pic/mitra-cafe.jpg",
+        "dishname": "Crispy Cutlet",
+        "name": "Mitra Cafe",
+        "address": "14L, 1A, Dum Dum Rd, Bir Para, Satpukur, Kolkata, West Bengal 700030",
+        "time": "11 A.M -10 P.M",
+        "link": "oudh_restaurant.html",
+        "cost": "500 for two"
+    },
+    {
+        "img": "pic/darao-pothik-bor.jpg",
+        "dishname": "Grilled Fish",
+        "name": "Darao Pothik Bor",
+        "address": "Ghughudanga, South Dumdum, West Bengal 700030",
+        "time": "11 A.M -10 P.M",
+        "link": "oudh_restaurant.html",
+        "cost": "750 for two"
+    },
+    {
+        "img": "pic/aminia-biryani.jpg",
+        "dishname": "Exotic Biryani",
+        "name": "Aminia",
+        "address": "54, Diamond Harbour Rd, Behala, Kolkata",
+        "time": "11 A.M -10 P.M",
+        "link": "oudh_restaurant.html",
+        "cost": "800 for two"
+
+    },
+    {
+        "img": "pic/peter-cat.jpg",
+        "dishname": "Sizzled Breakfast",
+        "name": "Peter Cat",
+        "address": "Park Street, West Bengal, 700016, India",
+        "time": "11 A.M -10 P.M",
+        "link": "oudh_restaurant.html",
+        "cost": "500 for two"
+    },
+    {
+        "img": "pic/mocambo.jpg",
+        "dishname": "Devilled Crab",
+        "name": "Mocambo",
+        "address": "Taltala Kolkata, West Bengal, 700016",
+        "time": "11 A.M -10 P.M",
+        "link": "oudh_restaurant.html",
+        "cost": "1200 for two"
+    },
+    {
+        "img": "pic/tung-fong.jpg",
+        "dishname": "Mach Mishti",
+        "name": "Tung Fong",
+        "address": "Karnani Mansion Mirza Ghalib Street,Park Street, West Bengal, 700016",
+        "time": "11 A.M -10 P.M",
+        "link": "oudh_restaurant.html",
+        "cost": "750 for two"
+    }
+]

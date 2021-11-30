@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="customizedfoodplate.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b8625aff4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="customizedfoodplate.js"></script>
+    <title>Customized Food Plate </title>
+</head>
+
+
+
+<body>
+    <div class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <p class="navbar-brand hover-underline-animation" href="#" style="color: black;">Foodstuff</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="index.html" style="color: black;">Home</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="restaurantsearch.html" style="color:black;">Eatery</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation">
+                        <a class="nav-link" href="caterersearch.html" style="color: black;">Caterers</a>
+                    </li>
+                    <li class="nav-item hover-underline-animation" onclick="showplate()">
+                        <span class="fa-stack  has-badge cart" data-count="0" onclick="showlist()">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
+    
+        <div id="order_table" style="display: none;">
+
+
+            <span onclick="closediv()" class="close" title="Close Modal">&times;</span>
+            <h2>Starter</h2>
+            <table id="tab1" class="table">
+                <tr>
+                    <th>Item</th>
+                    <th>Price (Unit  ₹)</th>
+                    <th>Quantity</th>
+                    <th>Total price</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            <h2>Maincourse</h2>
+            <table id="tab2" class="table2">
+                <tr>
+                    <th>Item</th>
+                    <th>Price (Unit  ₹)</th>
+                    <th>Quantity</th>
+                    <th>Total price</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br>
+            <h2>Desert</h2>
+            <table id="tab3" class="table3">
+                <tr>
+                    <th>Item</th>
+                    <th>Price (Unit  ₹)</th>
+                    <th>Quantity</th>
+                    <th>Total price</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <br><br>
+            <h2 id="total" style="text-align:center;"></h2>
+
+            <hr>
+
+            <div style="display: flex; justify-content: space-evenly;">
+                <button class="btn btn-danger" onclick="discardplate()">Discard Plate</button>
+                <h3>Or</h3>
+                <button class="btn btn-success" onclick="show_payment_page()">
+                  Confirm Booking <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+
+
+              <div class="payment_container container" id="payment_page">
+                <div class="row">
+                  <div class="col-md-4 left_div">
+                    <h2>Payment Details</h2>
+                    <br>
+                    <p><i class="fas fa-user"></i> User Name</p>
+                    <input type="text" placeholder="Enter Your Name" class="form_ip">
+                    <hr>
+                    <p><i class="fas fa-money-check-alt"></i> Order Total</p>
+                    <h2 id="set_price">$500</h2>
+                    <hr>
+                    <p><i class="far fa-calendar-check"></i> Date</p>
+                    <h2 id="set_date">23.07.2021</h2>
+                    <hr>
+                    <p><i class="fas fa-utensils"></i> Issuer</p>
+                    <h2>myMandap Catering Services</h2>
+                    <hr>
+                    <p><i class="fas fa-map-marker-alt"></i> Address</p>
+                    <input type="text" placeholder="Set Delivery Address" class="form_ip">
+                    <hr>
+                    <p><i class="far fa-lightbulb"></i> Expected Delivery</p>
+                    <h2 id="set_delivery_date">H1275439102</h2>
+                  </div>
+                  <div class="col-md-8">
+                    <center><h1>Payment Methods</h1></center>
+          
+                    <div class="btn_div">
+                      <button class="net_banking_btn">Net Banking</button>
+                    </div>
+                    <div class="line_div">
+                      <div class="line"></div>
+                      <p>Or</p>
+                      <div class="line"></div>
+                    </div>
+                    <p><b>UPI</b></p>
+                    <input
+                      type="text"
+                      class="payment_ip"
+                      placeholder="e.g - abc@upi_id"
+                    />
+                    <div class="line_div">
+                      <div class="line"></div>
+                      <p>Or</p>
+                      <div class="line"></div>
+                    </div>
+                    <p><b>Card</b></p>
+                    <div class="debit_card">
+                      <div
+                        style="width: 100%; display: flex; justify-content: space-between"
+                      >
+                        <p id="card-header">mastercard</p>
+                        <i class="fab fa-cc-mastercard"></i>
+                      </div>
+                      <div>
+                        <i class="fas fa-sim-card"></i>
+                      </div>
+        
+                      <p style="margin-top: 10px; color: #fff;"><b>NUMBER</b></p>
+                      <div id="number_div">
+                        <input
+                          type="password"
+                          name=""
+                          class="card_number"
+                          placeholder="1234"
+                          inputmode="tel"
+                        />
+                        <input
+                          type="password"
+                          name=""
+                          placeholder="5678"
+                          class="card_number"
+                          inputmode="tel"
+                        />
+                        <input
+                          type="password"
+                          name=""
+                          placeholder="9153"
+                          class="card_number"
+                          inputmode="tel"
+                        />
+                        <input
+                          type="password"
+                          name=""
+                          placeholder="1234"
+                          class="card_number"
+                          inputmode="tel"
+                        />
+                      </div>
+                      <div style="display: flex; margin-top: 20px;" >
+                        <div style="width: 60%">
+                          <span style="color: rgb(255, 255, 255)">NAME</span>
+                          <input type="text" placeholder="Jane Doe" id="name_ip" />
+                        </div>
+                        <div style="width: 40%">
+                          <span style="color: rgb(255, 255, 255)">EXPIRY DATE</span>
+                          <br />
+                          <input
+                            type="text"
+                            name=""
+                            class="exp_ip"
+                            placeholder="month"
+                            id=""
+                          />
+                          <span style="color: #fff">/</span
+                          ><input
+                            type="text"
+                            placeholder="year"
+                            class="exp_ip"
+                            name=""
+                            id=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="line_div">
+                        <div class="line"></div>
+                        <p>Or</p>
+                        <div class="line"></div>
+                      </div>
+                      <div class="btn_div">
+                        <button class="cod_btn">
+                            Cash On Delivery <input type="checkbox" name="" id="">
+                          </button>
+                      </div>
+                    <div class="btn_div">
+                      <button class="make_payment_btn">
+                        Make Payment <i class="fas fa-arrow-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+
+        
+        <div class="container" id="frontPage">
+            
+            <div class="row" style="margin-top: 5%;" >
+                <div class="col-md-6">
+                    <div id="text">
+                        <h1 id="heading">
+                            myMandap Catering Services
+                        </h1>
+                        <p class="description">
+                            Here you can select your own choice of food items
+                            to decorate the food plates for your esteemed
+                            guests. You can make changes according to your choice.
+                            We are providing varied choice of dishes in all
+                            types with different of range of prices. You will also be provided with our our <strong>customized
+                            choices </strong>  of dishes or youcan choose the various type of packages we offer packages we offer.
+                            We gurantee you to provide our best service which we have kept a reputation for more than 25 years.
+                        </p>
+                    <br>
+                        <a href="#inputDetailBox"><button class="btn1" onclick="getStarted()">Let's Get
+                                Started</button></a>
+                    </div>
+                </div>
+                <div class="col-md-6" id="imageslide">
+                    <div class="image fade">
+                        <img src="pic/landingpage.png" loading="eager" style="height:100%; width: 95%;" alt="">
+                    </div>
+                    <div class="image fade">
+                        <img src="pic/landingpage2.png" loading="eager" style="height:100%; width: 95%;" alt="">
+                    </div>
+                    <div class="image fade">
+                        <img src="pic/landingpage3.png" loading="eager" style="height:100%; width: 95%;" alt="">
+                    </div>
+                    <div class="image fade">
+                        <img src="pic/landingpage4.png" loading="eager" style="height:100%; width: 95%;" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <section id="inputDetailBox">
+
+            <div class="row" style="padding-top: 80px;">
+                <div class="col-md-4 card-holder" data-aos="fade-up" data-aos-duration="1000" >
+                    <div class="card2" id="gt" >
+                        <center><img class="card-img-top2" src="pic/thaali1.jpg" loading="eager" alt="Card image cap">
+                        </center>
+                        <div class="card-body">
+                          <h5 class="card-title" >Get Together</h5>
+                          <p class="card-text" >Dish emphasizes on small ocassional get-together.</p>
+                          <br>
+                          <a href="#" class="btn btn-primary">₹ 270</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-holder" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card2" id="bd" >
+                        <center><img class="card-img-top2" src="pic/thaali2.jpg" loading="eager" alt="Card image cap"> </center>
+
+                        <div class="card-body">
+                          <h5 class="card-title">Birthday Special</h5>
+                          <p class="card-text">Dish emphasizes on large birthday party and get-together.</p>
+                          <br>
+                          <a href="#" class="btn btn-primary">₹ 450</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 card-holder" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="card2" id="wd" >
+                        <center> <img class="card-img-top2" src="pic/thaali3.jpg" loading="eager" alt="Card image cap"> </center>
+                        <div class="card-body">
+                          <h5 class="card-title">Wedding Special</h5>
+                          <p class="card-text">Dish emphasizes on large fat Indian weddings and other socio-cultural events.</p>
+                          
+                          <a href="#" class="btn btn-primary">₹ 950</a>
+                        </div>
+                    </div>
+                </div>
+                                    
+            </div>
+                <div class="row" id="head_counts">
+                    <div class="col-md-6">
+                        <img src="pic/undraw_breakfast_psiw.png" loading="eager" id="animate"  style="height: 70%; width: 70%;" alt="">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="plates">
+                            <h3>Enter number of plates</h3>
+                            <button id="ipButton" onclick="decrement()"><i class="fas fa-minus"></i></button>
+                            <input placeholder="Head Counts" type=number id="heads" min="0">
+                            <button id="ipButton" onclick="increment()"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="tab" class="container">
+                <div id="tab_btn_container">
+                    <button onclick="changeTab(this,'starters',0)" href="#starters" class="active">Starters</button>
+                    <button onclick="changeTab(this,'maincourse',1)" href="#maincourse">Maincourse</button>
+                    <button onclick="changeTab(this,'desert',2)" href="#desert">Desert</button>
+                </div>
+                <div class="tab_indicator"></div>
+            </div>
+            <div class="tab-content">
+                <div id="starters" class="tabcontent">
+                    <div class="head-content">
+                        <h1 class="tabHeading">Starters</h1>
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip1" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <p class="dropdown-item">Price</p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="veg(this,'contents-starter')"
+                                        id="veg">
+                                    Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="nonveg(this)" id="non-veg">
+                                    Non-Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                    Low to high</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                    High to low</input></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contents-starter" class="contents row">
+                    </div>
+                </div>
+                <div id="maincourse" class="tabcontent">
+                    <div class="head-content">
+                        <h1 class="tabHeading" style="text-align: left;">Maincourse</h1>
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip2" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <p class="dropdown-item">Price</p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="veg(this,'contents-starter')"
+                                        id="veg">
+                                    Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="nonveg(this)" id="non-veg">
+                                    Non-Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                    Low to high</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                    High to low</input></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contents-maincourse" class="contents row">
+                    </div>
+                </div>
+                <div id="desert" class="tabcontent">
+                    <div class="head-content">
+                        <h1 class="tabHeading" style="text-align: left;">Desert</h1>
+                        <div class="searchContainer">
+                            <i class="fa fa-search searchIcon"></i>
+                            <input id="ip3" class="ipsearch" type="search" name="search" placeholder="Search...">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filters
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <p class="dropdown-item">Price</p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="veg(this,'contents-starter')"
+                                        id="veg">
+                                    Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="nonveg(this)" id="non-veg">
+                                    Non-Veg</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="lowtohigh(this)" id="lh">
+                                    Low to high</input></p>
+                                <p class="dropdown-item"><input type="checkbox" onclick="hightolow(this)" id="hl">
+                                    High to low</input></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contents-desert" class="contents row">
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+
+    </div>
+
+    <div id="buttom-nav">
+        <a href="index.html"><button><i class="fas fa-home"></i> <br> Home </button></a>
+        <a href="restaurantsearch.html"><button> <i class="fas fa-utensils"></i> <br> Explore </button></a>
+        <a href="caterersearch.html"><button><i class="fas fa-hamburger"></i> <br> Caterers </button></a>
+        <button onclick="showplate()" ><span class="fa-stack  has-badge cart" data-count="0" onclick="showlist()">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i><br>Cart
+            </span></button>
+    </div>
+
+    </div>
+
+
+    <script>
+
+
+document.getElementsByClassName('tabcontent')[0].style.display = "block";
+
+function changeTab(but,n,m){
+    var tabs = document.getElementsByClassName('tabcontent');
+    for(let i=0;i<tabs.length;i++)
+    {
+        tabs[i].style.display = "none";
+    }
+    document.getElementById(n).style.display = "block";
+    var tab_btn = document.querySelectorAll("#tab button");
+    for(let i=0;i<tab_btn.length;i++)
+    {
+        tab_btn[i].classList.remove('active');
+    }
+    let tab_indicator = document.getElementsByClassName('tab_indicator')[0];
+    tab_indicator.style.left=`calc(calc(100% / 3) * ${m})`;
+    but.classList.add('active');
+}
+
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("image");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        var prevScroll = window.pageYOffset;
+        window.onscroll = function () {
+            var currScroll = window.pageYOffset;
+            if (prevScroll > currScroll) {
+                document.getElementsByClassName("navbar")[0].style.top = "0";
+                document.getElementsByClassName("navbar")[0].style.transition = "0.5s";
+            }
+            else {
+                document.getElementsByClassName("navbar")[0].style.top = "-100px";
+                document.getElementsByClassName("navbar")[0].style.transition = "0.5s";
+            }
+
+            prevScroll = currScroll;
+
+        }
+
+
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById('tab');
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+            
+            let width = window.innerWidth;
+            if(width<800){
+                if (window.pageYOffset>= sticky ) {
+                navbar.classList.add("sticky");
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+            else{
+                if (window.pageYOffset>= sticky ) {
+                navbar.classList.add("sticky");
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+
+            if(width==768){
+                    if (window.pageYOffset>= sticky ) {
+                navbar.classList.add("sticky");
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                }
+        }
+
+
+
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

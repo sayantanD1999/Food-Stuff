@@ -1,0 +1,915 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Dosis", sans-serif !important;
+}
+
+.navbar-brand {
+  padding-top: 60px;
+}
+
+#navbarSupportedContent{
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+.sticky {
+  position: fixed;
+  top: 0px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 6px 2px -6px rgb(172, 172, 172);
+}
+
+.sticky + .tab-content{
+  padding-top: 10px;
+}
+
+#buttom-nav{
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  width: 100% !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0px -1px 3px rgba(187, 187, 187, 0.75);
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 880px) {
+  .sticky {
+    width: 90%;
+  } 
+  .navbar {
+    display: none;
+    width: 100% !important;
+  }
+  #buttom-nav {
+    display: block;
+  }
+}
+.fa-stack[data-count]:after {
+  cursor: pointer;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  content: attr(data-count);
+  font-size: 40%;
+  padding: 0.6em;
+  border-radius: 999px;
+  line-height: 0.75em;
+  color: white;
+  color: black;
+  text-align: center;
+  min-width: 2em;
+  font-weight: bold;
+  background: white;
+  border-style: solid;
+}
+.fa-circle {
+  cursor: pointer;
+  color: #000000;
+}
+
+.red-cart {
+  cursor: pointer;
+  color: #ffffff;
+  background: white;
+}
+
+.cart {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.cartAnimation {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.bar {
+  position: fixed;
+}
+
+#dishes {
+  padding-top: 30px !important;
+}
+
+
+/* Style the buttons inside the buttom-nav */
+
+#buttom-nav button {
+  background-color: #fff;
+  float: left;
+  width: 25%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+@media screen and (max-width: 420px) {
+  #buttom-nav {
+    display: block;
+  }
+
+  .slide-container {
+    padding-top: 0px !important;
+  }
+}
+
+@media screen and (width: 540px) {
+  #buttom-nav {
+    display: block;
+  }
+
+  .slide-container {
+    padding-top: 0px !important;
+  }
+}
+
+@media screen and (width: 768px){
+  #buttom-nav {
+    display: block;
+  }  
+}
+
+
+
+.hover-underline-animation {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: rgb(0, 0, 0);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.hover-underline-animation:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+#heading {
+  color: #59ffee;
+}
+
+#heads {
+  height: 40px;
+  width: 120px;
+  font-size: large;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+#ipButton {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #b5eaea;
+}
+
+#ipButton:hover {
+  background-color: rgb(77, 185, 235);
+  transition: 0.3s;
+}
+
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+
+.table2 {
+  width: 100%;
+}
+
+.table2 td,
+.table2 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table2 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table2 tr:hover {
+  background-color: #ddd;
+}
+
+.table2 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+
+.table3 {
+  width: 100%;
+}
+
+.table3 td,
+.table3 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table3 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table3 tr:hover {
+  background-color: #ddd;
+}
+
+.table3 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+
+#order_table {
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  color: rgb(8, 8, 8);
+  font-size: 60px !important;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.head-content {
+    padding-top: 15px;
+    font-size: x-large;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: -1;
+}
+
+.dropdown {
+  display: inline-block;
+  /* z-index: -1; */
+}
+
+#dropdownMenuButton {
+  margin-left: 10px;
+  width: 90%;
+  height: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.dropdown-item {
+  cursor: default;
+}
+
+.dropdown-item > input {
+  cursor: pointer;
+}
+.ipsearch {
+  max-width: 200px;
+  float: right;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border: none;
+  outline: none;
+  
+}
+
+.searchContainer {
+  color: black;
+  outline: none;
+  height: 40px;
+  min-width: 240px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.searchIcon {
+  font-size: medium;
+  outline: none;
+  padding: 0.5rem;
+  color: #396EB0;
+}
+
+.tabHeading {
+    color: #07588a;
+  }
+
+@media screen and (max-width: 420px) {
+  .tabHeading {
+    display: none;
+  }
+}
+
+.card-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-md-4 {
+  color: white;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.contents {
+  height: 100%;
+  width: auto;
+  margin: auto;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+#price {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#ip {
+  margin-bottom: 2px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#buttonsContainer {
+  width: 340px;
+  margin: auto;
+  padding-bottom: 30px;
+  display: block;
+}
+
+.card {
+  width: 250px;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  color: #414141;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.card:hover{
+  box-shadow: 0 0 5px rgb(206, 206, 206);
+  background: #F0F0F0;
+}
+
+
+.card-title {
+  font-size: x-large;
+  color: #2F86A6;
+}
+
+.card-img-top {
+  height: 170px;
+  width: 170px;
+  margin: auto;
+  border-radius: 90px;
+  border: 8px solid #71DFE7;
+}
+
+.col-md-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  width: 270px;
+  height: 410px;
+  margin: auto;
+  margin-top: 20px;
+  color: #414141;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ebebeb;
+  box-shadow: 0 0 4px rgb(191 191 191);
+}
+
+
+#text {
+  position: relative;
+  background: #07588a;
+  animation-name: curve;
+  animation-duration: 1.5s;
+  padding: 0px;
+  margin: 0px;
+  color: #bfe9db;
+  padding-top: 10% ;  
+  padding-bottom: 10%;
+  height: 100%;
+  line-height: 1.5;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.description {
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@keyframes curve {
+  0% {
+    clip-path: ellipse(0% 0% at 0% 0%);
+  }
+  100% {
+    clip-path: ellipse(100% 100% at 10% 20%);
+  }
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation: fadeinout 2s linear forwards;
+  animation: fadeinout 2s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeinout {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+#animate {
+  position: relative;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 5px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 0.1px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.btn1 {
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0px;
+  font-size: medium;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none !important; 
+}
+
+.btn1:hover {
+  background-color: #e1f6f4;
+  color: #011f3f;
+  transition: 0.3s;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.plate {
+  margin: auto;
+  width: 50%;
+}
+
+/* Style the tab */
+
+#tab{
+  background-color: #fff;
+  z-index: 1;
+  padding: 0px !important;
+}
+
+#tab_btn_container{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+  width: 100%;
+}
+
+/* Style the buttons inside the tab */
+
+#tab button {
+  background-color: #fff;
+  width: 33%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'dosis',sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+.active{
+  color: #74caff !important;;
+}
+
+.tab_indicator{
+  position: relative;
+  width: calc(100%/3);
+  height: 5px;
+  border-radius: 5px;
+  background-color: #74caff;
+  transition: all 500ms ease-in-out;
+
+}
+
+.tabcontent {
+  overflow-y: scroll;
+  display: none;
+  border-top: none;
+  animation: showTab 300ms ease-in-out both;
+  overflow-x: hidden;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+@keyframes showTab{
+  from {opacity: 0; top: 5px}
+  to {opacity: 1; top: 0;}
+}
+
+#gt {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+#wd {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+#bd {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.card-text {
+  font-size: 18px;
+}
+.card-img-top2 {
+  height: 170px;
+  width: 170px;
+  margin: auto;
+  border-radius: 90px;
+}
+
+.col-md-4,.col-md-8{
+  min-height: 100vh;
+  padding-left: 20px;
+}
+
+.payment_container{
+  display: none;
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+
+.payment_type {
+  height: 200px;
+  width: 200px;
+  border: 1px solid rgb(191, 191, 191);
+  box-shadow: 0 0 5px gray;
+  padding: 10px;
+}
+.btn_div{
+  width: 100%;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+.net_banking_btn {
+  width: 95%;
+  height: 45px;
+  background-color: rgb(0, 136, 204);
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+}
+.make_payment_btn {
+  margin: auto;
+  width: 95%;
+  height: 45px;
+  background-color: rgb(56, 209, 69);
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: none;
+}
+.cod_btn {
+  display: flex;
+  justify-content:space-evenly;
+  padding-top: 12px;
+  margin: auto;
+  width: 95%;
+  height: 45px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(7, 2, 137);
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+.payment_ip {
+  height: 45px;
+  outline: none;
+  width: 90%;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  padding-left: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(174, 174, 174);
+}
+.line_div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.line {
+  height: 1px;
+  background-color: rgb(177, 177, 177);
+  width: 100%;
+  margin: 12px;
+}
+.debit_card {
+  height: 220px;
+  width: 370px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  border-radius: 5px;
+}
+#number_div {
+  display: flex;
+  flex-direction: row;
+  margin-top: -14px;
+  margin-bottom: 2px;
+  margin-left: -6px;
+}
+#card-header {
+  font-family: unset;
+  font-weight: bold;
+  color: #fff;
+}
+.fa-sim-card {
+  margin-left: 5px;
+  color: #fff;
+  font-size: x-large;
+  transform: rotateZ(90deg);
+}
+.fa-cc-mastercard {
+  color: #fff;
+  font-size: x-large;
+}
+.card_number {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 20%;
+  color: #fff;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  margin: 10px;
+  letter-spacing: 8px;
+}
+::placeholder {
+  color: rgb(208, 208, 208);
+}
+
+#name_ip {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 90%;
+  color: #fff;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+}
+
+.exp_ip {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 39%;
+  text-align: center;
+  color: #fff;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  margin: 1px;
+}
+.card > p {
+  color: rgb(216, 216, 216);
+}
+
+.left_div{
+  background-color: rgb(0 123 143);
+  padding: 20px !important;
+  color: #fff;
+}
+
+
+@media screen and (min-width:320px) and (max-width:840px) {
+  .col-md-4,.col-md-8{
+   min-height:auto;
+  }
+  .debit_card{
+    width: 100%;
+  }
+  
+}
+
+button{
+  outline: none;
+}
+
+.form_ip{
+  outline: none;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  background: transparent;
+}
+
+
+
+
