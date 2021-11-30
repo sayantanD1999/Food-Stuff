@@ -534,17 +534,26 @@ body {
     #buttom-nav{
         display: block;
     }
+    .slide-container {
+        padding-top: 15px !important;
+    }
 }
  
   @media screen and (max-width: 520px) {
     #buttom-nav {
       display: block;
     }
+    .slide-container {
+        padding-top: 15px !important;
+    }
     }
   
   @media screen and (width: 540px) {
     #buttom-nav {
       display: block;
+    }
+    .slide-container {
+        padding-top: 15px !important;
     }
     }
   
