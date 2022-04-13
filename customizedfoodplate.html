@@ -121,7 +121,7 @@
             <div style="display: flex; justify-content: space-evenly;">
                 <button class="btn btn-danger" onclick="discardplate()">Discard Plate</button>
                 <h3>Or</h3>
-                <button class="btn btn-success" onclick="show_payment_page()">
+                <button class="btn btn-warning" onclick="show_payment_page()">
                   Confirm Booking <i class="fas fa-arrow-right"></i>
                 </button>
               </div>
@@ -142,13 +142,13 @@
                     <h2 id="set_date">23.07.2021</h2>
                     <hr>
                     <p><i class="fas fa-utensils"></i> Issuer</p>
-                    <h2>myMandap Catering Services</h2>
+                    <h2>Oudh 1590</h2>
                     <hr>
                     <p><i class="fas fa-map-marker-alt"></i> Address</p>
                     <input type="text" placeholder="Set Delivery Address" class="form_ip">
                     <hr>
                     <p><i class="far fa-lightbulb"></i> Expected Delivery</p>
-                    <h2 id="set_delivery_date">H1275439102</h2>
+                    <h2 id="set_delivery_date"></h2>
                   </div>
                   <div class="col-md-8">
                     <center><h1>Payment Methods</h1></center>
@@ -184,59 +184,75 @@
                         <i class="fas fa-sim-card"></i>
                       </div>
         
-                      <p style="margin-top: 10px; color: #fff;"><b>NUMBER</b></p>
+                      <p style="margin-top: 10px; color: rgb(0, 0, 0);"><b>NUMBER</b></p>
                       <div id="number_div">
                         <input
                           type="password"
+                          id="1"
                           name=""
                           class="card_number"
+                          onkeyup="changeInputFocus(this)"
                           placeholder="1234"
+                          maxlength="4"
                           inputmode="tel"
                         />
                         <input
                           type="password"
+                          id="2"
                           name=""
                           placeholder="5678"
+                          maxlength="4"
                           class="card_number"
+                          onkeyup="changeInputFocus(this)"
                           inputmode="tel"
                         />
                         <input
                           type="password"
+                          id="3"
                           name=""
                           placeholder="9153"
+                          maxlength="4"
                           class="card_number"
+                          onkeyup="changeInputFocus(this)"
                           inputmode="tel"
                         />
                         <input
                           type="password"
+                          id="4"
                           name=""
                           placeholder="1234"
+                          maxlength="4"
                           class="card_number"
+                          onkeyup="changeInputFocus(this)"
                           inputmode="tel"
                         />
                       </div>
                       <div style="display: flex; margin-top: 20px;" >
                         <div style="width: 60%">
-                          <span style="color: rgb(255, 255, 255)">NAME</span>
+                          <span style="color: rgb(0, 0, 0)">NAME</span>
                           <input type="text" placeholder="Jane Doe" id="name_ip" />
                         </div>
                         <div style="width: 40%">
-                          <span style="color: rgb(255, 255, 255)">EXPIRY DATE</span>
+                          <span style="color: rgb(0, 0, 0)">EXPIRY DATE</span>
                           <br />
                           <input
-                            type="text"
+                            type="number"
                             name=""
                             class="exp_ip"
                             placeholder="month"
                             id=""
+                            max="12"
+                            inputmode="tel"
                           />
-                          <span style="color: #fff">/</span
+                          <span style="color: rgb(0, 0, 0)">/</span
                           ><input
-                            type="text"
+                            type="number"
                             placeholder="year"
                             class="exp_ip"
                             name=""
                             id=""
+                            max="2030"
+                            inputmode="tel"
                           />
                         </div>
                       </div>
@@ -253,13 +269,12 @@
                       </div>
                     <div class="btn_div">
                       <button class="make_payment_btn">
-                        Make Payment <i class="fas fa-arrow-right"></i>
+                        Order Now <i class="fas fa-arrow-right"></i>
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-
         </div>
 
 
@@ -313,7 +328,7 @@
                           <h5 class="card-title" >Get Together</h5>
                           <p class="card-text" >Dish emphasizes on small ocassional get-together.</p>
                           <br>
-                          <a href="#" class="btn btn-primary">₹ 270</a>
+                          <a href="#" class="btn btn-warning">₹ 270</a>
                         </div>
                     </div>
                 </div>
@@ -325,7 +340,7 @@
                           <h5 class="card-title">Birthday Special</h5>
                           <p class="card-text">Dish emphasizes on large birthday party and get-together.</p>
                           <br>
-                          <a href="#" class="btn btn-primary">₹ 450</a>
+                          <a href="#" class="btn btn-warning">₹ 450</a>
                         </div>
                     </div>
                 </div>
@@ -336,7 +351,7 @@
                           <h5 class="card-title">Wedding Special</h5>
                           <p class="card-text">Dish emphasizes on large fat Indian weddings and other socio-cultural events.</p>
                           
-                          <a href="#" class="btn btn-primary">₹ 950</a>
+                          <a href="#" class="btn btn-warning">₹ 950</a>
                         </div>
                     </div>
                 </div>
@@ -344,14 +359,14 @@
             </div>
                 <div class="row" id="head_counts">
                     <div class="col-md-6">
-                        <img src="pic/undraw_breakfast_psiw.png" loading="eager" id="animate"  style="height: 70%; width: 70%;" alt="">
+                        <img src="pic/undraw_breakfast_psiw.png" loading="eager" id="animate"  style="height: 90%; width: 70%;" alt="">
                     </div>
                     <div class="col-md-6">
                         <div class="plates">
                             <h3>Enter number of plates</h3>
-                            <button id="ipButton" onclick="decrement()"><i class="fas fa-minus"></i></button>
+                            <button id="ipButton" class="btn btn-warning" onclick="decrement()"><i class="fas fa-minus"></i></button>
                             <input placeholder="Head Counts" type=number id="heads" min="0">
-                            <button id="ipButton" onclick="increment()"><i class="fas fa-plus"></i></button>
+                            <button id="ipButton" class="btn btn-warning" onclick="increment()"><i class="fas fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
@@ -374,7 +389,7 @@
                             <input id="ip1" class="ipsearch" type="search" name="search" placeholder="Search...">
                         </div>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Filters
                             </button>
@@ -403,7 +418,7 @@
                             <input id="ip2" class="ipsearch" type="search" name="search" placeholder="Search...">
                         </div>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Filters
                             </button>
@@ -432,7 +447,7 @@
                             <input id="ip3" class="ipsearch" type="search" name="search" placeholder="Search...">
                         </div>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Filters
                             </button>

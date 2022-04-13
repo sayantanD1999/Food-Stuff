@@ -81,8 +81,7 @@ function lowtohigh(item) {
   }
   var sortedArr = [];
   var a =
-    item.parentElement.parentElement.parentElement.parentElement
-      .parentElement;
+    item.parentElement.parentElement.parentElement.parentElement.parentElement;
   console.log(a);
   var card = a.querySelectorAll("div .card");
   console.log(card);
@@ -139,8 +138,7 @@ function hightolow(item) {
   }
   var sortedArr = [];
   var a =
-    item.parentElement.parentElement.parentElement.parentElement
-      .parentElement;
+    item.parentElement.parentElement.parentElement.parentElement.parentElement;
   console.log(a);
   var tr = a.querySelectorAll("div .card");
   console.log(tr);
@@ -644,7 +642,7 @@ function closediv() {
 function show_payment_page() {
   document.getElementsByClassName("payment_container")[0].style.display =
     "block";
-  document.getElementById("set_price").innerHTML = "₹ " + total_cost ;
+  document.getElementById("set_price").innerHTML = "₹ " + total_cost;
   var d = new Date();
   var date = d.getDate();
   var month = d.getMonth() + 1;
@@ -663,4 +661,10 @@ function show_payment_page() {
 
 function discardplate() {
   window.location.reload();
+}
+
+function changeInputFocus(ip) {
+  if (ip.value.length >= 4) {
+    document.getElementById( parseInt(ip.id)  + 1).focus();
+  }
 }

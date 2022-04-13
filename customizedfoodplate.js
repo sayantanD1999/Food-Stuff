@@ -553,3 +553,8 @@ function show_payment_page() {
 function discardplate() {
   window.location.reload();
 }
+function changeInputFocus(ip) {
+  if (ip.value.length >= 4) {
+    document.getElementById( parseInt(ip.id)  + 1).focus();
+  }
+}

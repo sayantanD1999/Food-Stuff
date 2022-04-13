@@ -48,7 +48,7 @@ window.onload = () => {
                                 <p class="card-text"><i class="fas fa-map-marker-alt"></i> ${data[i].address}
                                 <h5 id="location" data-city=${data[i].city}><i class="fas fa-map-marker-alt"></i> ${data[i].city}</h5>
                                 <h4 id="price" data-price=${data[i].cost}>₹ ${data[i].cost} Per Plate</h4>
-                                <a href="${data[i].link}" class="btn btn-primary">Check In</a>
+                                <a href="${data[i].link}" class="btn btn-warning">Check In</a>
                             </div>
                             </div>
                         </div>

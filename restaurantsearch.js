@@ -43,7 +43,7 @@ window.onload = () => {
                         </p> 
                         <p><i class="fas fa-rupee-sign"></i>    ${data[i].cost}</p>
 
-                        <a href="${data[i].link}" class="btn btn-primary checkin_btn">Check In</a>
+                        <a href="${data[i].link}" class="btn btn-warning checkin_btn">Check In</a>
                 </div>
             </div>
 

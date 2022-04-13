@@ -206,7 +206,7 @@ h6 {
 }
 
 #heading {
-  color: #59ffee;
+  color: #000000;
 }
 
 #heads {
@@ -242,7 +242,7 @@ button {
   width: 40px;
   border-radius: 5px;
   outline: none;
-  background-color: #b5eaea;
+  /* background-color: #b5eaea; */
 }
 
 #ipButton:hover {
@@ -268,7 +268,7 @@ button {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4caf50;
+  background-color:#202020;
   color: white;
 }
 
@@ -294,7 +294,7 @@ button {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4caf50;
+  background-color: #202020;
   color: white;
 }
 
@@ -320,7 +320,7 @@ button {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4caf50;
+  background-color: #202020;
   color: white;
 }
 
@@ -398,11 +398,11 @@ button {
   font-size: medium;
   outline: none;
   padding: 0.5rem;
-  color: #396EB0;
+  color: #d06800;
 }
 
 .tabHeading {
-    color: #07588a;
+    color: #ffb23d;
   }
 
 @media screen and (min-width: 280px) and (max-width: 880px) {
@@ -476,7 +476,7 @@ button {
 
 .card-title {
   font-size: x-large;
-  color: #2F86A6;
+  color: #e66f00;
 }
 
 .card-img-top {
@@ -484,7 +484,7 @@ button {
   width: 170px;
   margin: auto;
   border-radius: 90px;
-  border: 8px solid #71DFE7;
+  border: 8px solid #f6cd00;
 }
 
 .col-md-6 {
@@ -510,12 +510,12 @@ button {
 
 #text {
   position: relative;
-  background: #07588a;
+  background: #f1da40;
   animation-name: curve;
   animation-duration: 1.5s;
   padding: 0px;
   margin: 0px;
-  color: #bfe9db;
+  color: #0d100f;
   padding-top: 10% ;  
   padding-bottom: 10%;
   height: 100%;
@@ -676,7 +676,7 @@ a:hover {
 }
 
 .active{
-  color: #74caff !important;;
+  color: #e97900 !important;;
 }
 
 .tab_indicator{
@@ -684,7 +684,7 @@ a:hover {
   width: calc(100%/3);
   height: 5px;
   border-radius: 5px;
-  background-color: #74caff;
+  background-color: #e97900;
   transition: all 500ms ease-in-out;
 
 }
@@ -754,8 +754,8 @@ a:hover {
 .net_banking_btn {
   width: 95%;
   height: 45px;
-  background-color: rgb(0, 136, 204);
-  color: #fff;
+  background-color: rgb(234, 191, 0);
+  color: black;
   border-radius: 4px;
   border: none;
 }
@@ -763,8 +763,8 @@ a:hover {
   margin: auto;
   width: 95%;
   height: 45px;
-  background-color: rgb(56, 209, 69);
-  color: #fff;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-bottom: 20px;
   border-radius: 4px;
   border: none;
@@ -812,7 +812,7 @@ a:hover {
   border: none;
   padding: 10px;
   margin-bottom: 20px;
-  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  background-image:linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   border-radius: 5px;
 }
 #number_div {
@@ -825,16 +825,16 @@ a:hover {
 #card-header {
   font-family: unset;
   font-weight: bold;
-  color: #fff;
+  color: black;
 }
 .fa-sim-card {
   margin-left: 5px;
-  color: #fff;
+  color: black;
   font-size: x-large;
   transform: rotateZ(90deg);
 }
 .fa-cc-mastercard {
-  color: #fff;
+  color: black;
   font-size: x-large;
 }
 .card_number {
@@ -842,38 +842,41 @@ a:hover {
   border-left: none;
   border-right: none;
   width: 20%;
-  color: #fff;
+  color: black;
   outline: none;
+  font-weight: bold;
   background-color: transparent;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid black;
   margin: 10px;
   letter-spacing: 8px;
 }
 ::placeholder {
-  color: rgb(208, 208, 208);
+  color: rgb(0, 0, 0);
 }
 
 #name_ip {
+  font-weight: bold;
   border-top: none;
   border-left: none;
   border-right: none;
   width: 90%;
-  color: #fff;
+  color: black;
   outline: none;
   background-color: transparent;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid black;
 }
 
 .exp_ip {
+  font-weight: bold;
   border-top: none;
   border-left: none;
   border-right: none;
   width: 39%;
   text-align: center;
-  color: #fff;
+  color: black;
   outline: none;
   background-color: transparent;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid black;
   margin: 1px;
 }
 .card > p {
@@ -881,9 +884,9 @@ a:hover {
 }
 
 .left_div{
-  background-color: rgb(0 123 143);
+  background-color: rgb(250, 207, 62);
   padding: 20px !important;
-  color: #fff;
+  color: black;
 }
 
 
@@ -906,7 +909,7 @@ button{
   border: none;
   font-size: 1.5em;
   font-weight: bold;
-  color: #fff;
+  color: black;
   background: transparent;
 }
 

@@ -230,7 +230,7 @@ body {
 
 .hero-button {
     display: inline-block;
-    text-decoration: none;
+    text-decoration: none !important;
     text-transform: uppercase;
     padding: 13px 20px;
     border-radius: 200px;
@@ -331,7 +331,7 @@ body {
 
 .menu-image {
     min-height: 80vh;
-    background: url('pic/catering.jpg')center/cover fixed no-repeat;
+    background: url('pic/catering.jpg') center/cover fixed no-repeat;
 }
 
 .menu-text {
